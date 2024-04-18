@@ -1,0 +1,125 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MILLENIAL ALLIANCES </title>
+    <link rel="stylesheet" href="/stylesheets/stylee.css .css">
+
+</head>
+<body>
+    <!-- header section start here  -->
+    <header class="header">
+        <div class="logoContent">
+            <a href="#" class="logo"><img src="/images/logo.png" alt=""></a>
+            <h1 class="logoName"> MILLENIAL ALLIANCES  </h1>
+        </div>
+        <nav class="navbar">
+            <a href="aa.html">home</a>
+            <a href="#About">About Us </a>
+            <a href="/gallery">Gallary</a>
+            <a href="Announcement form/index.html">Announcements</a>
+            <a href="abc/contact.html">contact</a>
+            <a href="/login">Login</a>
+        </nav>
+    </header>
+    <!-- header section end here  -->
+    <div class="slider">
+        <div class="slides">
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        
+        <div class="slide first">
+            <img src="images/aa.webp" alt="">
+        </div>
+        <div class="slide">
+            <img src="images/aa.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="images/aa.webp" alt="">
+        </div>
+        <div class="slide">
+            <img src="images/abc.jpg" alt="">
+        </div>
+    </div>
+        <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+        </div>
+        <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+        </div>
+    </div>
+    <section class="about">
+        <div class="main">
+            <img src="images/ab.jpg">
+            <div class="about-text" id="About">
+    <h1>About Us</h1>
+    <h5> The New Wave of living</h5>
+    <p>"A housing society is a type of residential community 
+        where residents share common spaces and amenities, such 
+        as gardens, playgrounds, and parking areas. Housing societies 
+        are governed by elected committees, which manage the maintenance, 
+        security, and overall well-being of the community. They offer a sense 
+        of community living and promote social interaction among residents."</p>
+    <button type="button"> Read More</button>
+</div>
+</div>
+</section>
+
+     <!-- footer section start here  -->
+     <footer class="footer" id="contact">
+        <div class="box-container">
+            <div class="mainBox">
+                <div class="content">
+                    <a href="#"><img src="image/logo.png" alt=""></a>
+                    <h1 class="logoName"> MILLENIAL ALLIANCES  </h1>
+                </div>
+                <p>The New Wave Of living</p>
+            </div>
+            <div class="box">
+                <h3>Quick link</h3>
+                <a href="index.html"> <i class="fas fa-arrow-right"></i>Home</a>
+                <a href="product/product.html"> <i class="fas fa-arrow-right"></i>product</a>
+                <a href="#blogs"> <i class="fas fa-arrow-right"></i>blogs</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>review</a>
+                <a href="contact/contact.html"> <i class="fas fa-arrow-right"></i>contact</a>
+            </div>
+            <div class="box">
+                <h3>Extra link</h3>
+                <a href="contact/contact.html"> <i class="fas fa-arrow-right"></i>Account info</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>order item</a>
+                <a href="contact/contact.html"> <i class="fas fa-arrow-right"></i>our  services</a>
+            </div>
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="#"> <i class="fas fa-phone"></i>ABHINASH: +91 9814538354</a>
+                <a href="#"> <i class="fas fa-phone"></i>KAMAL BIST: +91 7814562175</a>
+                <a href="#"> <i class="fas fa-envelope"></i>MILLENIAALLIANCES@GMAIL.COM</a>
+            </div>
+        </div>
+        <div class="credit">
+            © 2022,<span> AK Creator. All rights reserved. </span> 
+        </div>
+    </footer>
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function(){
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 4) {
+                counter = 1;
+            }
+        }, 5000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House - Sign Up</title>
+    <link rel="stylesheet" href="/stylesheets/sginup.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="">
+            <h1>Sign Up</h1>
+            <h3>USER ID: <span id="USERID"></span></h1>
+            <button type="button" onclick="generateUserID()">Generate USER ID</button><BR><BR>
+            <div class="input-box">
+                <input type="text" placeholder="NAME" required>
+                <i class='bx bx-user' ></i>
+            </div>
+            <div class="input-box">
+                <input type="EMAIL" placeholder="EMAIL_ID" required>
+                <i class='bx bx-envelope'></i>
+            </div>
+            <div class="input-box">
+                <input type="PASSWORD" placeholder="PASSWORD" required>
+                <i class='bx bx-lock-alt'></i>
+            </div>
+            <div class="input-box">
+                <input type="CONFIRM PASSWORD" placeholder="CONFIRM PASSWORD" required>
+                <i class='bx bx-lock-alt'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="PHONE" required>
+                <i class='bx bx-building-house' ></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="GENDER" required>
+                <i class='bx bx-building-house' ></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Flat" required>
+                <i class='bx bx-building-house' ></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="ROLE" required>
+                <i class='bx bxs-network-chart'></i>
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+            <div class="register-link">
+                <p>Already have an account? <a href="../Site/Site/index/index.html">Login</a></p>
+            </div>
+        </form>
+    </div>
+    <script>
+        // Function to generate a random user ID
+        function generateUserID() {
+            // Generate a random number and convert it to a string
+            var userID = "USER-" + Math.floor(Math.random() * 10000); // Adjust the length of the user ID as needed
+            // Display the generated user ID on the webpage
+            document.getElementById("USERID").textContent = userID;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+  }
+  /* Styling form */
+form {
+  justify-content: center;
+  background: transparent;    
+  /*background-color: #fff;*/
+  border: 2px solid rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0,0,0,.8);
+  padding: 50px 100px; /* Adjust the padding as needed */
+  border-radius: 0px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+    background: url('h.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+
+  
+  /* Styling form */
+  form {
+    justify-content: center;
+    background: transparent;    
+   /*background-color: #fff;*/
+   border: 2px  solid rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0,0,0,.8);
+    padding: 40px;
+    
+    border-radius: 0px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+  /* Styling form heading */
+  h1 {
+    font-size: 50px;
+    margin-bottom: 25px;
+  }
+  
+  /* Styling input boxes */
+  .input-box {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .input-box input:focus {
+    border-color: #007bff;
+  }
+  
+  /* Styling icons */
+  .input-box i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #999;
+  }
+  
+  /* Styling submit button */
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styling register link */
+  .register-link {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .register-link p {
+    font-size: 14px;
+    color: #ffffff;
+  }
+  
+  .register-link a {
+    color: #001123;
+    text-decoration: none;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Make body background transparent */
+  body.transparent-body {
+    background-color: transparent;
+  }
+  

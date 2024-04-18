@@ -1,0 +1,19 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "chlo": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "knex": "^3.1.0",
+    "nodemon": "^3.1.0",
+    "oracledb": "^4.2.0"
+  }
+}
