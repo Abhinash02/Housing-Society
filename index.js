@@ -13,7 +13,8 @@ const knex = require('knex')({
   }
 });
 
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5001
+;
 app.listen(PORT, () => {
     console.log(`Server is running on port http://localhost:${PORT}`);
 });
@@ -39,6 +40,9 @@ app.get("/login",(req,res)=>{
 })
 app.get("/signup",(req,res)=>{
   res.render("signup")
+})
+app.get("/payment",(req,res)=>{
+  res.render("payment")
 })
 
 app.post("/login",async(req, res)=>{
