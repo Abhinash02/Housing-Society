@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welfare Committee</title>
+<link rel="stylesheet" href="/stylesheets/Welfarecmmittee.css">
+</head>
+<body>
+  <!-- header section start here  -->
+  <header class="header">
+    <div class="logoContent">
+        <a href="#" class="logo"><img src="log.png" alt=""></a>
+        <h1 class="logoName"> MILLENIAL ALLIANCES  </h1>
+    </div>
+    <nav class="navbar">
+        <a href="/">home</a>
+        <a href="/gallary">Gallary</a>
+        <a href="/contact">contact</a>
+        <a href="/login">Login</a>
+    </nav>
+</header>
+<!-- header section end here  -->
+<div class="container">
+  <h1 class="form-title">Welfare Committee Form</h1><br>
+  <form action="/committee" method="POST">
+    <div class="user-input-box">
+      <label for="Title">Welfare Id</label>
+      <input type="text" id="Welfare Id" name="WELFARE_ID" placeholder="Title" required>
+    </div>
+    <div class="main">
+      <div class="user-input-box">
+        <label for="Title">Welfare Name</label>
+        <input type="text" id="Titlee" name="TITLE" placeholder="Title" required>
+      </div>
+      <div class="user-input-box">
+        <label for="Role">Role</label>
+        <input type="text" id="Role" name="Role" required>
+      </div>
+      <div class="user-input-box">
+        <label for="selectedDate">Start Date</label>
+        <input type="date" id="selectedDate" name="START_DATE" required>
+      </div>
+      <div class="user-input-box">
+        <label for="selectedDate">End Date</label>
+        <input type="date" id="selectedDate" name="END_DATE" required>
+      </div>
+    </div>
+    
+    <div class="form-submit-btn">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+</body>
+
+</html>

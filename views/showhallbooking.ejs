@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/showbooking.css">
+  <title>Booking Information</title>
+</head>
+<body>
+  <!-- Display booking information in a table -->
+  <div class="wrapper">
+    <div class="title">
+      Booking Information
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Booking ID</th>
+          <th>Amount</th>
+          <th>Purpose</th>
+          <th>Description</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Resident Name</th>
+          <th>Actions</th> <!-- Added Actions column header -->
+        </tr>
+      </thead>
+      <tbody>
+        <% bookingData.forEach(function(booking) { %>
+          <tr>
+            <td><%= booking.BOOKINGID %></td>
+            <td><%= booking.AMOUNT %></td>
+            <td><%= booking.PURPOSE %></td>
+            <td><%= booking.DESCRIPTION %></td>
+            <td><%= booking.STARTDATE %></td>
+            <td><%= booking.ENDDATE %></td>
+            <td><%= booking.STARTTIME %></td>
+            <td><%= booking.ENDTIME %></td>
+            <td><%= booking.RESIDENT_NAME %></td>
+            
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

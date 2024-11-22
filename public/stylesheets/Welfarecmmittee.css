@@ -1,0 +1,270 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root{
+    --black: #1B1722;
+    --white : #dcd1d1;
+    --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+*{
+    font-family: 'Quicksand', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+html{
+    font-size: 62.5%;   
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: var(--white);
+    border-radius: 5rem;
+}
+
+.header{
+    top: 0;right: 0;left: 0;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding: 1.4rem 7%;
+    z-index: 999;
+}
+.header .logoContent{
+    display: flex;
+    align-items: center;
+}
+.header .logoContent .logo img{
+    height: 5rem;
+}
+.header .logoContent .logoName {
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+.header .navbar a{
+    font-size: 2rem;
+    margin-right: 3rem;
+    color: var(--black);
+    font-weight: bold;
+}
+.header .navbar a:hover{
+    border-bottom: .1rem solid var(--black);
+    padding-bottom: .4rem;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/3.jpg);
+    background-size: cover;
+}
+/* CSS for white welfare ID */
+.welfare_id label {
+    color: white; /* Set label text color to white */
+  }
+  
+  .welfare_id select {
+    color: white; /* Set select text color to white */
+    background-color: transparent; /* Make select background transparent */
+    border: 1px solid rgb(26, 24, 24); /* Add white border */
+    border-radius: 5px; /* Add border radius */
+    padding: 8px; /* Add padding */
+    outline: none; /* Remove outline */
+  }
+  
+  /* Style for option text color */
+  .welfare_id option {
+    color: black; /* Set option text color */
+  }
+  
+.container {
+    width: 100%;
+    max-width: 650px;
+    background: rgba(55, 81, 131, 0.363); /* Darken the background */
+    padding: 28px;
+    margin: 0 28px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+    border-bottom: solid 2px #ffffff;
+    
+}
+
+.form-title {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 12px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow */
+    border-bottom: solid 2px #ffffff; /* White border bottom */
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.user-input-box {
+    width: 48%; /* Adjusted width for better spacing */
+    padding-bottom: 20px; /* Increased padding bottom */
+}
+
+.user-input-box label {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 6px; /* Adjusted margin bottom */
+}
+.user-input-box input, 
+.user-input-box select {
+    height: 40px;
+    width: 100%;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 0 12px;
+    font-size: 16px;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.user-input-box input:focus, 
+.user-input-box select:focus {
+    border-color: #007bff; /* Highlight border color on focus */
+}
+
+.form-submit-btn {
+    margin-top: 30px; /* Adjusted margin top */
+}
+
+.form-submit-btn input {
+    width: 100%;
+    font-size: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.form-submit-btn input:hover {
+    background-color: #0056b3; /* Darken background color on hover */
+}
+
+.message-box {
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    margin-top: 30px; /* Adjusted margin top */
+}
+
+.message-box h2 {
+    margin-bottom: 12px; /* Increased margin bottom */
+    color: #333;
+}
+
+.message-box textarea {
+    width: 200%;
+    height: 120px; /* Increased height for better message input */
+    padding: 12px;
+    margin-bottom: 12px; /* Increased margin bottom */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: none;
+    font-size: 16px;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+/* Media queries for web responsiveness */
+
+/* Adjust font size for smaller screens */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    .header {
+        padding: 1.3rem 3rem;
+    }
+    .home .homeContent {
+        margin-left: 0;
+        width: 80%;
+    }
+}
+
+/* Adjust layout for screens smaller than 768px */
+@media (max-width: 768px) {
+    /* Display the menu bar inline for smaller screens */
+    #menu-bar {
+        display: inline-block;
+    }
+    /* Position the navbar */
+    .header .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 25rem;
+        background-color: var(--white);
+        height: 80vh;
+    }
+    /* Display the active navbar */
+    .header .navbar.active {
+        right: 0;
+    }
+    /* Style the navbar links */
+    .header .navbar a {
+        display: block;
+        font-size: 2rem;
+        color: black;
+        margin: 1.5rem;
+    }
+    /* Adjust layout for home content */
+    .home .homeContent {
+        margin-left: 0;
+        width: 90%;
+    }
+}
+
+/* Further adjust font size for very small screens */
+@media (max-width: 600px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+/* Hide navigation links and display burger menu for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .burger {
+        display: flex;
+    }
+}
+
+
+
+

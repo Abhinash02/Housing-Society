@@ -12,6 +12,77 @@
     height: 100vh;
     
   }
+  .input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    color: #888;
+    font-size: 14px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-box select:focus + label,
+.input-box select:not(:placeholder-shown) + label {
+    top: 10px;
+    font-size: 12px;
+    color: #333;
+}
+
+.custom_select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.custom_select select {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+.custom_select select::-ms-expand {
+    display: none;
+}
+
+.custom_select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #888;
+}
+
+.custom_select select:focus ~::after {
+    color: #333;
+}
+
   /* Styling form */
 form {
   justify-content: center;
@@ -30,7 +101,7 @@ form {
     justify-content: center;
     align-items: center;
     min-height: 20vh;
-    background: url('h.jpg') no-repeat;
+    background: url('../images/backpic.png') no-repeat;
     background-size: cover;
     background-position: center;
   }

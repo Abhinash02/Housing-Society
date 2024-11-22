@@ -9,45 +9,48 @@
 </head>
 <body>
     <div class="wrapper">
-        <form action="">
+        <form action="/register" method="post">
             <h1>Sign Up</h1>
-            <h3>USER ID: <span id="USERID"></span></h1>
-            <button type="button" onclick="generateUserID()">Generate USER ID</button><BR><BR>
             <div class="input-box">
-                <input type="text" placeholder="NAME" required>
-                <i class='bx bx-user' ></i>
+                <input type="text" id="userID" name="USER_ID" readonly required>
+                <i class='bx bx-envelope'></i>
+            </div>
+            <button type="button" onclick="generateUserID()">Generate USER ID</button><br><br>
+            <div class="input-box">
+                <input type="text" placeholder="NAME" name="NAME" required>
+                <i class='bx bx-user'></i>
             </div>
             <div class="input-box">
-                <input type="EMAIL" placeholder="EMAIL_ID" required>
+                <input type="email" placeholder="EMAIL ID" name="EMAIL_ID" required>
                 <i class='bx bx-envelope'></i>
             </div>
             <div class="input-box">
-                <input type="PASSWORD" placeholder="PASSWORD" required>
+                <input type="password" placeholder="PASSWORD" name="PASSWORD" pattern="^(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$" required>
                 <i class='bx bx-lock-alt'></i>
             </div>
             <div class="input-box">
-                <input type="CONFIRM PASSWORD" placeholder="CONFIRM PASSWORD" required>
+                <input type="password" placeholder="CONFIRM PASSWORD" name="CONFIRM_PASSWORD" pattern="^(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$" required>
                 <i class='bx bx-lock-alt'></i>
             </div>
             <div class="input-box">
-                <input type="text" placeholder="PHONE" required>
-                <i class='bx bx-building-house' ></i>
+                <input type="text" placeholder="PHONE" name="PHONE" maxlength="10" required>
+                <i class='bx bx-phone'></i>
             </div>
             <div class="input-box">
-                <input type="text" placeholder="GENDER" required>
-                <i class='bx bx-building-house' ></i>
+                <input type="text" placeholder="GENDER" name="GENDER" required>
+                <i class='bx bx-gender'></i>
             </div>
             <div class="input-box">
-                <input type="text" placeholder="Flat" required>
-                <i class='bx bx-building-house' ></i>
+                <input type="text" placeholder="FLAT"  name="FLAT" required>
+                <i class='bx bx-home'></i>
             </div>
             <div class="input-box">
-                <input type="text" placeholder="ROLE" required>
+                <input type="text" placeholder="ROLE" name="ROLE" required>
                 <i class='bx bxs-network-chart'></i>
             </div>
             <button type="submit" class="btn">Sign Up</button>
             <div class="register-link">
-                <p>Already have an account? <a href="../Site/Site/index/index.html">Login</a></p>
+                <p>Already have an account? <a href="../views/login.ejs">Login</a></p>
             </div>
         </form>
     </div>
@@ -55,10 +58,23 @@
         // Function to generate a random user ID
         function generateUserID() {
             // Generate a random number and convert it to a string
-            var userID = "USER-" + Math.floor(Math.random() * 10000); // Adjust the length of the user ID as needed
+            var userID = "" + Math.floor(Math.random() * 10000); // Adjust the length of the user ID as needed
             // Display the generated user ID on the webpage
-            document.getElementById("USERID").textContent = userID;
+            document.getElementById("userID").value = userID;
         }
+    </script>
+    <script>
+        // JavaScript validation
+        document.getElementById('phoneNumberForm').addEventListener('submit', function(event) {
+            const phoneNumberInput = document.getElementById('phoneNumber');
+            const phoneNumber = phoneNumberInput.value.trim();
+    
+            // Check if the phone number contains exactly 10 digits
+            if (!/^\d{10}$/.test(phoneNumber)) {
+                alert('Please enter a valid 10-digit phone number.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
     </script>
 </body>
 </html>

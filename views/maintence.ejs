@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maintenance</title>
+  <link rel="stylesheet" href="/stylesheets/maintence.css">
+</head>
+<body>
+  <form action="/maintence" method="post" form id="manitenceForm">
+<div class="wrapper">
+    <div class="title">
+      Maintenance Form
+    </div>
+    <div class="form">
+       <div class="inputfield" name="MAINTENCE_ID">
+          <label>Maintenance ID</label>
+          <input type="text" id="maintenanceId" class="input" name="MAINTENCE_ID" readonly>
+       </div>  
+
+       <!-- Dropdown for selecting Welfare Committee name -->
+       <div class="inputfield" name="WELFARE_COMMITTEE">
+          <label>Welfare Committee</label>
+          <div class="custom_select">
+            <select name="WELFARE_COMMITTEE_ID">
+              <option value="">Select</option>
+              <% id.forEach(function(committee) { %>
+                <option value="<%= committee.WELFAREID %>"><%= committee.NAME %></option>
+              <% }); %>
+            </select>
+          </div>
+       </div>
+
+        <div class="inputfield">
+          <label>Start Date</label>
+          <input type="text" class="input" name="START_DATE">
+       </div>  
+       <div class="inputfield">
+          <label>End Date</label>
+          <input type="text" class="input" name="END_DATE">
+       </div>  
+      
+       <div class="inputfield" name="DESCRIPTION">
+        <label>Description</label>
+        <textarea class="textarea" name="DESCRIPTION"></textarea>
+    </div> 
+    
+    <div class="inputfield" name="CATEGORY">
+        <label>Category/Type</label>
+        <div class="custom_select">
+            <select name="TYPE">
+                <option value="">Select</option>
+                <option value="wall-Paint">Wall Paint</option>
+                <option value="Plumber">Plumber</option>
+                <option value="Road">Road</option>
+                <option value="Electrician">Electrician</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+    </div>
+    
+        <div class="inputfield">
+          <label>Cost</label>
+          <input type="text" class="input" name="COST">
+       </div> 
+      <div class="inputfield" name="SUBMIT">
+        <input type="submit" value="Register" class="btn">
+      </div>
+    </div>
+</div> 
+
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!-- adminDashboard.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Add any necessary stylesheets or external CSS links -->
+    <link rel="stylesheet" href="/stylesheets/viewwelfare.css">
+</head>
+<body>
+    <form action="/viewwelfare" method="post">
+    <h1>Welfare Committee</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Welfare ID</th>
+                <th>Name</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% id.forEach(function(welfare) { %>
+                <tr>
+                    <td><%= welfare.WELFAREID %></td>
+                    <td><%= welfare.NAME %></td>
+                    <td><%= welfare.STARTDATE %></td>
+                    <td><%= welfare.ENDDATE %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </form>
+    </table>
+</body>
+</html>

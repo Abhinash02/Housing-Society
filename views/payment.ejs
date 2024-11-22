@@ -1,94 +1,83 @@
-
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Responsive Payment</title>
-	<link rel="stylesheet" type="text/css" href="/stylesheets/payment.css">
-</head>
-<body>
-<header>
-	<div class="container">
-		<div class="left">
-			<h3>WELCOME TO MILLENIAL ALLIANCES</h3>
-			<form id="paymentForm" onsubmit="submitPayment()">
-				Payment_id
-				<input type="text" name="" placeholder="Enter Payment_id " required>
-				
-				Payment Details
-				<input type="text" name="" placeholder="Payment Details" required>
-				Date Time
-				<input type="datetime-local" name="dateTime" placeholder="Enter Date Time" required><br>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Payment</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/payment.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="left">
+          <h3>WELCOME TO MILLENIAL ALLIANCES</h3>
+          <form action="/payment" method="post" form id="paymentForm">
+            Payment_id <input type="text" placeholder="Enter Payment_id " name="PAYMENT_ID" id="PAYMENT_ID" required>
+            Payment Details <input type="text" placeholder="Payment Details" name="PAYMENT_DETAILS" required>
+            Date <BR>
+            <!-- Date Input -->
+            <input type="date" name="PAYMENT_DATE" placeholder="Enter Date" required> <br>
+            Time <BR>
+            <!-- Time Input -->
+            <input type="time" name="PAYMENT_TIME" placeholder="Enter Time" required><br>
+            Booking Id
+			 <input type="text" value="<%= booking.BOOKING_ID %>" readonly  name="BOOKING_ID" required>
 
-				Amount
-				<input type="text" name="" placeholder="Enter Amount"required>
+			
+			Amount <input type="text" value="<%= booking.PAYMENT %>" readonly  name="AMOUNT" required>
+            Payment_Type <input type="text" placeholder="Enter PAYMENT_MODE" name="PAYMENT_TYPE" required>
+            <div id="zip">
+              <label> State
+                <select>
+                  <option>Choose State..</option>
+                  <option>Rajasthan</option>
+                  <option>Punjab</option>
+                  <option>Chandigarh</option>
+                  <option>Punjab</option>
+                  <option>Delhi</option>
+                  <option>banglore</option>
+                  <option>Hariyana</option>
+                  <option>Uttar Pradesh</option>
+                  <option>Madhya Pradesh</option>
+                </select>
+              </label>
+              <label> Zip code <input type="number" name="" placeholder="Zip code" name="ZIP CODE" required> </label><br> <br> <br>
+            </div>
+            <div class="hi">
+              <button type="submit" class="submit-button">Submit</button>
+            </div>
+          </form>
 
-				<div id="zip">
-					<label>
-						State
-						<select>
-							<option>Choose State..</option>
-							<option>Rajasthan</option>
-							<option>Punjab</option>
-							<option>Chandhigarh</option>
-							<option>Punjab</option>
-							<option>Delhi</option>
-							<option>banglore</option>
-							<option>Hariyana</option>
-							<option>Uttar Pradesh</option>
-							<option>Madhya Pradesh</option>
-						</select>
-					</label>
-						<label>
-						Zip code
-						<input type="number" name="" placeholder="Zip code" required>
-					</label>
-				</div>
-			</form>
-		</div>
-		<div class="right">
-			<h3>PAYMENT</h3>
-			<form>
-				Accepted Card <br>
-				<img src="image/card1.png" width="100">
-				<img src="image/card2.png" width="50">
-				<br><br>
+          <!-- Display booking details -->
+          <% if (booking) { %>
+            <div>
+              <h4>Booking Details:</h4>
+              <p>Booking ID: <%= booking.BOOKING_ID %></p>
 
-				Credit card number
-			<input type="text" name="" placeholder="Enter card number" required>
-				
-				Exp month
-				<input type="text" name="" placeholder="Enter Month" required>
-				<div id="zip">
-					<label>
-						Exp year
-						<select>
-							<option>Choose Year..</option>
-							<option>2019</option>
-							<option>2020</option>
-							<option>2021</option>
-							<option>2022</option>
-							<option>2023</option>
-							<option>2024</option>
-							<option>2025</option>
-						</select>
-					</label>
-						<label>
-						CVV
-						<input type="number" name="" placeholder="CVV" required>
-					</label>
-				</div>
-			</form>
-			<input type="submit" name="" value="Proceed to Checkout" required>
-		</div>
-	</div>
-</header>
-<script>
-	function submitPayment() {
-		// Perform validation if needed
-		// Assuming validation passes, show a success message
-		alert("Payment successfully done!");
-	}
-	</script>
-</body>
+              <p>Description: <%= booking.DESCRIPTION %></p>
+              <p>Start Date: <%= booking.START_DATE %></p>
+              <p>End Date: <%= booking.END_DATE %></p>
+              <p>Start Time: <%= booking.START_TIME %></p>
+              <p>End Time: <%= booking.END_TIME %></p>
+              <p>Payment: <%= booking.PAYMENT %></p>
+            </div>
+          <% } %>
+        </div>
+      </div>
+    </header>
+    <script>
+      // Function to generate a random payment ID
+      function generatePAYMENT_ID() {
+        // Generate a random number and convert it to a string
+        var PAYMENT_ID = Math.floor(Math.random() * 10000);
+        // Adjust the length of the payment ID as needed
+        // Display the generated payment ID on the webpage
+        document.getElementById("PAYMENT_ID").value = PAYMENT_ID;
+      }
+
+      // Generate payment ID when the page loads
+      window.onload = function() {
+        generatePAYMENT_ID();
+      };
+    </script>
+  </body>
 </html>

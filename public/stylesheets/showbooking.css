@@ -1,0 +1,66 @@
+/* Styles for the wrapper */
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Styles for the title */
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Styles for the table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Styles for table header */
+  thead {
+    background-color: #f2f2f2;
+  }
+  
+  /* Styles for table header cells */
+  th {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Styles for table data cells */
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Alternate row color for better readability */
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Hover effect for table rows */
+  tbody tr:hover {
+    background-color: #e5e5e5;
+  }
+  
+  /* Styles for action buttons */
+  .action-buttons button {
+    padding: 8px 16px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .edit-button {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .delete-button {
+    background-color: #f44336;
+    color: white;
+  }
+  

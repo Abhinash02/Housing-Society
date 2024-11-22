@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/userdashboard.css">
+    <title> User Dashboard</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="container" >
+        <form action="/login" method="post">
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="../views/Dashboard.ejs">
+                        <i class='bx bx-home'></i>
+                        <div class="title"> Home </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/">
+                        <i class='bx bxs-dashboard' ></i>
+                        <div class="title"> Dashboard </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./resortbooking">
+                        <i class='bx bx-book-open' ></i>
+                        <div class="title"> Hall Booking </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/abc">
+                        <i class='bx bxs-calendar-event'></i>
+                        <div class="title"> Announcement </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./viewmaintence">
+                        <i class='bx bxs-dashboard' ></i>
+                        <div class="title"> Maintenance </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/viewss">
+                        <i class='bx bxs-dashboard' ></i>
+                        <div class="title"> Present Welfare Committee</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="top-bar">
+                <div class="search">
+                    <h1>USER DASHBOARD</h1>
+                </div>
+                <div class="user">
+                    <img src="/images/logo.png" alt="">
+                    <a href="/logout">Logout</a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number"><%= user[0].USER_ID%></div>
+                        <div class="card-name"> USER ID</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class='bx bx-building-house'></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number"><%= user[0].NAME%></div>
+                        <div class="card-name">Member Name</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class='bx bx-building-house'></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number"><%= user[0].FLAT%></div>
+                        <div class="card-name">Flat No</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class='bx bx-party'></i>
+                    </div>
+                </div>
+                <div class="tables">
+                    <div class="House Holder Name ">
+                        <h2> House Holder Name</h2>
+                        <a href="" class="btn"> View</a>
+                </div>
+                    <div class="Party Hall Appointmnet ">
+                        <h2> Party Hall Appointmnet</h2>
+                        <a href="#" class="btn"> View</a>
+                </div>
+            </div>
+          
+    </div>
+</div>
+</form>
+</body>
+</html>

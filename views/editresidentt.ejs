@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Resident</title>
+  <link rel="stylesheet" href="/stylesheets/editresident.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Edit Resident</h1>
+    <form action="/editresident" method="POST">
+      <input type="hidden" name="userId" value="<%= resident.USER_ID %>">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="<%= resident.NAME %>" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+
+        <input type="email" id="email" name="email" value="<%= resident.EMAIL_ID %>" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" value="<%= resident.PHONE %>" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="M" <%= resident.GENDER === 'M' ? 'selected' : '' %>>Male</option>
+          <option value="F" <%= resident.GENDER === 'F' ? 'selected' : '' %>>Female</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="flat">Flat:</label>
+        <input type="text" id="flat" name="flat" value="<%= resident.FLAT %>" required>
+      </div>
+      <div class="form-group">
+        <label for="role">Role:</label>
+        <select id="role" name="role" required>
+          <option value="Resident" <%= resident.ROLE === 'Resident' ? 'selected' : '' %>>Resident</option>
+          <option value="admin" <%= resident.ROLE === 'admin' ? 'selected' : '' %>>Admin</option>
+        </select>
+      </div>
+      <button type="submit">Update Resident</button>
+    </form>
+  </div>
+</body>
+</html>

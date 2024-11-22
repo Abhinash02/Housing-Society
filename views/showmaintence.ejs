@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maintenance</title>
+  <link rel="stylesheet" href="/stylesheets/viewmaintence.css">
+</head>
+<body>
+  <!-- Add your maintenance form here if needed -->
+
+  <!-- Display all maintenance data in a table -->
+  <div class="wrapper">
+    <div class="title">
+      All Maintenance Data
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Maintenance ID</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Description</th>
+          <th>Category/Type</th>
+          <th>Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% maintenanceData.forEach(function(maintenance) { %>
+          <tr>
+            <td><%= maintenance.MAINTENANCE_ID %></td>
+            <td><%= maintenance.START_DATE %></td>
+            <td><%= maintenance.END_DATE %></td>
+            <td><%= maintenance.DESCRIPTION %></td>
+            <td><%= maintenance.CATEGORY %></td>
+            <td><%= maintenance.COST %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Add any additional HTML or JavaScript as needed -->
+
+</body>
+</html>

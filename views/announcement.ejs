@@ -1,59 +1,78 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Announcement Form</title>
+<link rel="stylesheet" href="/stylesheets/announcement.css">
+</head>
+<body>
+  <!-- header section start here  -->
+  <header class="header">
+    <div class="logoContent">
+        <a href="#" class="logo"><img src="log.png" alt=""></a>
+        <h1 class="logoName"> MILLENIAL ALLIANCES  </h1>
+    </div>
+    <nav class="navbar">
+        <a href="/">home</a>
+        <a href="/gallary">Gallary</a>
+        <a href="/contact">contact</a>
+        <a href="/login">Login</a>
+    </nav>
+</header>
+<!-- header section end here  -->
+<div class="container">
+  <h1 class="form-title">Announcement Form</h1><br>
+  <form action="/announcement" method="POST">
+    <div class="welfare_id">
+      <h2><label for="welfare_id">Welfare ID:</label></h2><br>
+      <select id="welfare_id"   name="WELFARE_ID"required>
+        <option value="">Select an option</option><br>
+        <option value="1" name="1">Unity Welfare Coalition </option>
+        <option value="2" name="2">Hopefull Hearts Committee </option>
+      </select>
+    </div>
+    <div class="main">
+      <div class="user-input-box">
+        <label for="Title">Announcement ID</label>
+        <input type="text" id="Title"  placeholder="Title" name="ANNOUNCEMENT_ID" readonly>
+      </div>
+      <div class="user-input-box">
+        <label for="Title">Announcement Title</label>
+        <input type="text" id="Title"  placeholder="Title" name="ANNOUNCEMENT_TITLE" required>
+      </div>
+      <div class="user-input-box">
+        <label for="selectedDate">Select Date</label>
+        <input type="date" id="selectedDate" name="SELECT_DATE" required>
+      </div>
+      <div class="user-input-box">
+        <label for="selectedTime">Select Time</label>
+        <input type="time" id="selectedTime"  step="1800"  name="SELECT_TIME" required> <!-- 1800 seconds = 30 minutes -->
+      </div>
+      <div class="user-input-box">
+        <label for="Message">Announcement Message</label>
+        <textarea id="Message"  placeholder="Enter your message" rows="4" cols="40" name="ANOUNCEMENT_MESSAGE" required></textarea>
+      </div>
+    </div>
+    <div class="form-submit-btn">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+<script>
+  // Function to generate a random announcement ID
+  function generateANNOUNCEMENT_ID() {
+      // Generate a random number and convert it to a string
+      var ANNOUNCEMENT_ID = Math.floor(Math.random() * 10000); // Adjust the length of the announcement ID as needed
+      // Display the generated announcement ID on the webpage
+      document.getElementById("ANNOUNCEMENT_ID").value = ANNOUNCEMENT_ID;
+  }
 
-        <meta name="viewport" content="width=device-width, initial-scale-1.0">
-        <title> Gallary</title>
-        <link rel="Stylesheet" href="style.css">
-        
-    </head>
-    <body>
-        <header>
-            <div class="header-content">
-                <h1 class="title">MILLENIAL ALLIANCES</h1>
-                <ul class="header-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Announcements</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-        </header>
-        
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="box">
-        <br<P><h1>WELCOME TO MILLENIAL ALLIANCES</P>
-        </div>
-        <div class="boxx">
-        <h3>Welcome to our gallery of housing society! Here, we showcase some of the most beautiful 
-        and luxurious residential complexes in the city.</h3>
-    </div>
-        <div class="full-img">
-            <img src="images/3.jpg">
-            <span>X</span>
-        </div>
-        <div class="img-gallary">
-        <img src="images/M.jpg.jpg">
-        <img src="images/6.jpg">
-        <img src="images/8.jpg">
-        <img src="images/a.webp">
-        <img src="images/ab.jpg">
-        <img src="images/b.webp">
-        <img src="images/aa.webp">
-        <img src="images/d.jpg">
-        <img src="images/garden.jpg">
-        <img src="images/Basketball.jpg">
-        <img src="images/Clinik.jpg">
-        <img src="images/home.jpg">
-        
-    </div>
-    </body>
+  // Generate announcement ID when the page loads
+  window.onload = function() {
+      generateANNOUNCEMENT_ID();
+  };
+</script>
+</body>
+
 </html>

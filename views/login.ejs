@@ -11,29 +11,23 @@
 </head>
 <body>
        <div class="wrapper">
-             <form action="">
+             <form action="/login" method="post">
                 <h1>Login</h1>
                 <div class="input-box">
-                    <input type="text" placeholder="Username" required>
+                    <input type="text" placeholder="User_Id" name='USER_ID' required>
                     <i class='bx bx-user' ></i>                </div>
                     <div class="input-box">
-                        <input type="Password" placeholder="Pasword" required>
+                        <input type="Password" placeholder="Pasword" name="PASSWORD" required>
                         <i class='bx bx-lock-alt' ></i>
                 </div>
-
-                <div class="remember-forgot">
-                    <label><input type="checkbox"> Remember me</label>
-                    <a href="#"> Forgot Password? </a>
+                <div class="container">
+                    <div class="content">
+                        <input type="submit" class="btn" placeholder="login">
+                        <!-- <a href="" class="btn">Login</a> -->
+                    </div>
                 </div>
-
-                <button type="submit" class="btn">login</button>
-
-                <div class="register-link">
-                    <p>Go to Home Section?  <a href="aa.html">HOME</a></p>
-                </div>
-
                 <div class="ADMIN register-link">
-                    <p>Don't have an account?  <a href="/signup">ADMIN Register</a></p>
+                    <p>Don't have an account?  <a href="/signup">Register</a></p>
                 </div>
 
                 </div>

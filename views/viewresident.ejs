@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/stylesheets/viewresident.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  
+
+  <!-- Add any necessary stylesheets or external CSS links -->
+</head>
+<body>
+    <form action="/viewresident" method="post">
+        <div class="header">
+            <h1>All Residents</h1>
+        </div>
+  <table>
+    <thead>
+      <tr>
+        <th>User ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Gender</th>
+        <th>Flat</th>
+        <th>Role</th>
+      </tr>
+    
+    </thead>
+    <tbody>
+      <% residents.forEach(function(resident) { %>
+        <tr>
+          <td><%= resident.USER_ID %></td>
+          <td><%= resident.NAME %></td>
+          <td><%= resident.EMAIL_ID %></td>
+          <td><%= resident.PHONE %></td>
+          <td><%= resident.GENDER %></td>
+          <td><%= resident.FLAT %></td>
+          <td><%= resident.ROLE %></td>
+          <td>
+            
+            <!-- <form action="/editresident/<%= resident.USER_ID %>" method="get
+            "> -->
+              <!-- Edit button -->
+              <!-- <button type="submit" name="editUserId" value="<%= resident.USER_ID %>">Edit</button>
+            </form> -->
+            <form action="/deleteresident" method="post">
+              <!-- Delete button -->
+              <button type="submit" name="deleteUserId" value="<%= resident.USER_ID %>">Delete</button>
+            </form>
+          </td>
+          <td>
+            <a href="/editresident/<%= resident.USER_ID %>">Edit</a>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>

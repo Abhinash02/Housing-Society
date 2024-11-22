@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resort booking form</title>
+    <link rel="stylesheet" href="/stylesheets/resortbooking.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/resortBooking" method="post" class="form-group">
+            <div id="form">
+                <h1 class="text-white text-center">Hall Booking</h1>
+                <div id="first-group">
+                    <div id="content">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <input type="text" id="input-group" placeholder="Booking-id" name="BOOKING_ID" readonly>
+                    </div>
+                    <div id="content">
+                        <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                        <select id="input-group" name="PURPOSE" onchange="updatePayment(this)">
+                            <option value="">Select Purpose</option>
+                            <option value="3000">Birthday Party</option>
+                            <option value="4600">Marriage Party</option>
+                            <option value="3000">Retirement Party</option>
+                            <option value="8000">Anniversary Party</option>
+                            <option value="5000">Others</option>
+                        </select>
+                    </div>
+                    <div id="content">
+                        <i class="fa fa-calendar" aria-hidden="true"></i> Start Date
+                        <input type="date" id="input-group" placeholder="Start Date" name="START_DATE">
+                    </div>
+                    <div id="content">
+                        <i class="fa fa-clock-o" aria-hidden="true"></i> Start Time
+                        <input type="time" id="input-group" placeholder="Start Time" name="START_TIME">
+                    </div>
+                </div>
+                <div id="second-group">
+                    <div id="content">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                        <input type="text" id="input-group" placeholder="Payment" name="PAYMENT" readonly>
+                    </div>
+                    <div id="content">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <input type="text" id="input-group" placeholder="Description" name="DESCRIPTION">
+                    </div>
+                    <div id="content">
+                        <i class="fa fa-calendar" aria-hidden="true"></i> End Date
+                        <input type="date" id="input-group" placeholder="End Date" name="END_DATE">
+                    </div>
+                    <div id="content">
+                        <i class="fa fa-clock-o" aria-hidden="true"></i> End Time
+                        <input type="time" id="input-group" placeholder="End Time" name="END_TIME">
+                    </div>
+                </div>
+                <button type="submit" id="submit-btn">Book Now</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        // Function to generate a random booking ID
+        function generateBOOKINGID() {
+            // Generate a random number and convert it to a string
+            var BOOKINGID = Math.floor(Math.random() * 1000);
+            // Adjust the length of the booking ID as needed
+            // Display the generated booking ID on the webpage
+            document.getElementsByName("BOOKING_ID")[0].value = BOOKINGID;
+        }
+
+        // Function to update the payment field based on the selected purpose
+        function updatePayment(selectElement) {
+            var paymentInput = document.getElementsByName("PAYMENT")[0];
+            paymentInput.value = selectElement.value;
+        }
+
+        // Generate booking ID when the page loads
+        window.onload = function() {
+            generateBOOKINGID();
+        };
+    </script>
+</body>
+</html>
